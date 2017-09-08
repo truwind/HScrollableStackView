@@ -14,7 +14,7 @@
 
 @protocol HorizonalScrollableStackViewDataSource <NSObject>
 
-- (NSInteger)stackViewNumberOfRows:(HorizonalScrollableStackView*)stackView;
+- (NSInteger)numberOfRows:(HorizonalScrollableStackView*)stackView;
 - (WVerticalProgressView *)stackView:(HorizonalScrollableStackView*)stackView cellForRowAtIndex:(NSInteger)index;
 
 @end

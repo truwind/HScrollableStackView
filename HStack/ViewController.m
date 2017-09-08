@@ -84,7 +84,7 @@
 }
 
 #pragma mark - HorizonalScrollableStackViewDelegate
-- (NSInteger)stackViewNumberOfRows:(HorizonalScrollableStackView*)stackView {
+- (NSInteger)numberOfRows:(HorizonalScrollableStackView*)stackView {
     return 10;
 }
 

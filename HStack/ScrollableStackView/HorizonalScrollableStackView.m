@@ -132,7 +132,7 @@
 
 #pragma mark - LifeCycle Function
 - (void)initStackView {
-    NSInteger numberOfRows = [self.dataSource stackViewNumberOfRows:self];
+    NSInteger numberOfRows = [self.dataSource numberOfRows:self];
     for(NSInteger i = 0; i < numberOfRows; i++){
         WVerticalProgressView * subView = [self.dataSource stackView:self cellForRowAtIndex:i];
         [self addCustomViewToStack:subView];
