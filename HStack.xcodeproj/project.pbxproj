@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30DA9AC81F60F1FB00BF7CC5 /* HorizonalScrollableStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DA9AC71F60F1FB00BF7CC5 /* HorizonalScrollableStackView.m */; };
 		30F43CC81F5FF17D00B6A031 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F43CC71F5FF17D00B6A031 /* main.m */; };
 		30F43CCB1F5FF17D00B6A031 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F43CCA1F5FF17D00B6A031 /* AppDelegate.m */; };
 		30F43CCE1F5FF17D00B6A031 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F43CCD1F5FF17D00B6A031 /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30DA9AC61F60F1FB00BF7CC5 /* HorizonalScrollableStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HorizonalScrollableStackView.h; path = ScrollableStackView/HorizonalScrollableStackView.h; sourceTree = "<group>"; };
+		30DA9AC71F60F1FB00BF7CC5 /* HorizonalScrollableStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HorizonalScrollableStackView.m; path = ScrollableStackView/HorizonalScrollableStackView.m; sourceTree = "<group>"; };
 		30F43CC31F5FF17D00B6A031 /* HStack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HStack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F43CC71F5FF17D00B6A031 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		30F43CC91F5FF17D00B6A031 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30DA9AC51F60F1C600BF7CC5 /* ScrollableStackView */ = {
+			isa = PBXGroup;
+			children = (
+				30DA9AC61F60F1FB00BF7CC5 /* HorizonalScrollableStackView.h */,
+				30DA9AC71F60F1FB00BF7CC5 /* HorizonalScrollableStackView.m */,
+			);
+			name = ScrollableStackView;
+			sourceTree = "<group>";
+		};
 		30F43CBA1F5FF17D00B6A031 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +113,7 @@
 		30F43CC51F5FF17D00B6A031 /* HStack */ = {
 			isa = PBXGroup;
 			children = (
+				30DA9AC51F60F1C600BF7CC5 /* ScrollableStackView */,
 				30F43CC91F5FF17D00B6A031 /* AppDelegate.h */,
 				30F43CCA1F5FF17D00B6A031 /* AppDelegate.m */,
 				30F43CCC1F5FF17D00B6A031 /* ViewController.h */,
@@ -276,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30DA9AC81F60F1FB00BF7CC5 /* HorizonalScrollableStackView.m in Sources */,
 				30F43CCE1F5FF17D00B6A031 /* ViewController.m in Sources */,
 				30F43CCB1F5FF17D00B6A031 /* AppDelegate.m in Sources */,
 				30F43CC81F5FF17D00B6A031 /* main.m in Sources */,
@@ -516,6 +530,7 @@
 				30F43CF21F5FF17D00B6A031 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30F43CF31F5FF17D00B6A031 /* Build configuration list for PBXNativeTarget "HStackTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +539,7 @@
 				30F43CF51F5FF17D00B6A031 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30F43CF61F5FF17D00B6A031 /* Build configuration list for PBXNativeTarget "HStackUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +548,7 @@
 				30F43CF81F5FF17D00B6A031 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
