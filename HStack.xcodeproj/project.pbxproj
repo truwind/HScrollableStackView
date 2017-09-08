@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		304829E21F62723F0070AA70 /* WVerticalProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304829E11F62723F0070AA70 /* WVerticalProgressView.swift */; };
 		30DA9AC81F60F1FB00BF7CC5 /* HorizonalScrollableStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DA9AC71F60F1FB00BF7CC5 /* HorizonalScrollableStackView.m */; };
 		30F43CC81F5FF17D00B6A031 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F43CC71F5FF17D00B6A031 /* main.m */; };
 		30F43CCB1F5FF17D00B6A031 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F43CCA1F5FF17D00B6A031 /* AppDelegate.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		304829DE1F6267DF0070AA70 /* HStack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HStack-Bridging-Header.h"; sourceTree = "<group>"; };
+		304829E11F62723F0070AA70 /* WVerticalProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WVerticalProgressView.swift; path = TWRProgressView/WVerticalProgressView.swift; sourceTree = "<group>"; };
 		30DA9AC61F60F1FB00BF7CC5 /* HorizonalScrollableStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HorizonalScrollableStackView.h; path = ScrollableStackView/HorizonalScrollableStackView.h; sourceTree = "<group>"; };
 		30DA9AC71F60F1FB00BF7CC5 /* HorizonalScrollableStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HorizonalScrollableStackView.m; path = ScrollableStackView/HorizonalScrollableStackView.m; sourceTree = "<group>"; };
 		30F43CC31F5FF17D00B6A031 /* HStack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HStack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		304829D71F62381D0070AA70 /* TWRProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				304829DE1F6267DF0070AA70 /* HStack-Bridging-Header.h */,
+				304829E11F62723F0070AA70 /* WVerticalProgressView.swift */,
+			);
+			name = TWRProgressView;
+			sourceTree = "<group>";
+		};
 		30DA9AC51F60F1C600BF7CC5 /* ScrollableStackView */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +125,7 @@
 		30F43CC51F5FF17D00B6A031 /* HStack */ = {
 			isa = PBXGroup;
 			children = (
+				304829D71F62381D0070AA70 /* TWRProgressView */,
 				30DA9AC51F60F1C600BF7CC5 /* ScrollableStackView */,
 				30F43CC91F5FF17D00B6A031 /* AppDelegate.h */,
 				30F43CCA1F5FF17D00B6A031 /* AppDelegate.m */,
@@ -221,6 +234,7 @@
 					30F43CC21F5FF17D00B6A031 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = B78UJ3KK2S;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					30F43CDB1F5FF17D00B6A031 = {
@@ -293,6 +307,7 @@
 				30F43CCE1F5FF17D00B6A031 /* ViewController.m in Sources */,
 				30F43CCB1F5FF17D00B6A031 /* AppDelegate.m in Sources */,
 				30F43CC81F5FF17D00B6A031 /* main.m in Sources */,
+				304829E21F62723F0070AA70 /* WVerticalProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,11 +456,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = B78UJ3KK2S;
 				INFOPLIST_FILE = HStack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KMS.HStack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HStack/HStack-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -453,17 +473,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = B78UJ3KK2S;
 				INFOPLIST_FILE = HStack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KMS.HStack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HStack/HStack-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		30F43CF41F5FF17D00B6A031 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = B78UJ3KK2S;
 				INFOPLIST_FILE = HStackTests/Info.plist;
@@ -477,6 +502,7 @@
 		30F43CF51F5FF17D00B6A031 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = B78UJ3KK2S;
 				INFOPLIST_FILE = HStackTests/Info.plist;
@@ -490,6 +516,7 @@
 		30F43CF71F5FF17D00B6A031 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = B78UJ3KK2S;
 				INFOPLIST_FILE = HStackUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -502,6 +529,7 @@
 		30F43CF81F5FF17D00B6A031 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = B78UJ3KK2S;
 				INFOPLIST_FILE = HStackUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

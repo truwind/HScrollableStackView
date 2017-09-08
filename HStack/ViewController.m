@@ -8,9 +8,9 @@
 
 #import "ViewController.h"
 #import "HorizonalScrollableStackView.h"
+#import "HStack-Swift.h"
 
-
-@interface ViewController ()
+@interface ViewController () <HorizonalScrollableStackViewDelegate, HorizonalScrollableStackViewDataSource>
 
 
 @property (weak, nonatomic) IBOutlet UIView *backView;
@@ -20,7 +20,11 @@
 @property (weak, nonatomic) IBOutlet HorizonalScrollableStackView *hScrollStack;
 @property (weak, nonatomic) IBOutlet UIView *vwBack2;
 
+
+@property (assign, nonatomic) CGFloat progress;
+
 @end
+
 
 @implementation ViewController
 
@@ -31,9 +35,11 @@
     self.backView.backgroundColor = [UIColor lightGrayColor];
     self.hScrollStack.layer.borderWidth = 1.0;
     self.hScrollStack.layer.borderColor = [UIColor darkGrayColor].CGColor;
-#if 0
- 
-#endif
+    
+    self.hScrollStack.dataSource = self;
+    self.hScrollStack.delegate = self;
+    [self.hScrollStack initStackView];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -51,7 +57,10 @@
 }
 
 - (IBAction)ClickedAddEntry:(id)sender {
-    [self createScrollableStackView];
+    self.progress += 0.1;
+    if(self.progress > 1.0) self.progress = 0.1;
+    
+    
 }
 
 - (void) createScrollableStackView {
@@ -60,7 +69,42 @@
                                                                                                               [UIScreen mainScreen].bounds.size.width - 50,
                                                                                                               self.hScrollStack.frame.size.height) innerWidth:self.widthOfInnerView];
     
+    stackView.dataSource = self;
+    stackView.delegate = self;
     [self.vwBack2 addSubview:stackView];
+}
+
+- (IBAction)slideValueChanged:(id)sender {
+    UISlider * slide = (UISlider *)sender;
+    NSInteger numberOfSubViews = [self.hScrollStack getNumberOfSubViews];
+    for(NSInteger index =0; index < numberOfSubViews; index++){
+        WVerticalProgressView * subView = [self.hScrollStack getSubViewWithIndex:index];
+        [subView setProgress:slide.value];
+    }
+}
+
+#pragma mark - HorizonalScrollableStackViewDelegate
+- (NSInteger)stackViewNumberOfRows:(HorizonalScrollableStackView*)stackView {
+    return 10;
+}
+
+- (WVerticalProgressView *)stackView:(HorizonalScrollableStackView*)stackView cellForRowAtIndex:(NSInteger)index{
+    
+    WVerticalProgressView * subView = [[WVerticalProgressView alloc] initWithFrame:CGRectMake(0, 0, self.widthOfInnerView, stackView.frame.size.height)];
+//    UIColor *randomColor = [UIColor colorWithRed:(CGFloat)drand48() green:(CGFloat)drand48() blue:(CGFloat)drand48() alpha:1.0];
+//    subView.backgroundColor = randomColor;
+    subView.backgroundColor = [UIColor lightGrayColor];
+    [subView setProgress:0.0];
+    return subView;
+}
+
+#pragma mark - HorizonalScrollableStackViewDataSource
+- (void)stackView:(HorizonalScrollableStackView*)stackView didSelectRowAtIndex:(NSInteger)index {
+    
+}
+
+- (void)stackView:(HorizonalScrollableStackView*)stackView didDeSelectRowAtIndex:(NSInteger)index {
+    
 }
 
 
