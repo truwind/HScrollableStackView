@@ -17,6 +17,9 @@ class WVerticalProgressView: UIView {
         }
         set(newValue) {
             self.selected = newValue
+            if(!self.selected) {
+                self.progress = 0.0
+            }
         }
     }
     var progress: CGFloat = 0.0 {
@@ -61,7 +64,7 @@ class WVerticalProgressView: UIView {
         let height = (self.frame.height - margin ) * progress
         
         let pathRef = UIBezierPath(rect: CGRect(x: margin / 2.0, y: (self.frame.height - margin ), width: width, height: -height))
-        UIColor.red.setFill()
+        UIColor.green.setFill()
         pathRef.fill()
         
         UIColor.clear.setStroke()

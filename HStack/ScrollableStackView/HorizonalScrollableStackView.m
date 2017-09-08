@@ -225,7 +225,7 @@
                 [self.delegate stackView:self didSelectRowAtIndex:subView.tag];
             }
         }
-        subView.isSelected =! subView.isSelected;
+        subView.isSelected =!subView.isSelected;
     }
 }
 

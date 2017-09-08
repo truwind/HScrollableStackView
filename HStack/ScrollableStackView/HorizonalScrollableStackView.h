@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "WProgressView.h"
 #import "HStack-Swift.h"
 
 @class HorizonalScrollableStackView;

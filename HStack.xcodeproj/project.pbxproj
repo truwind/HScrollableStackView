@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		304829E21F62723F0070AA70 /* WVerticalProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304829E11F62723F0070AA70 /* WVerticalProgressView.swift */; };
+		30BA94491F628906001E2C51 /* WVProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BA94481F628906001E2C51 /* WVProgressView.m */; };
 		30DA9AC81F60F1FB00BF7CC5 /* HorizonalScrollableStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DA9AC71F60F1FB00BF7CC5 /* HorizonalScrollableStackView.m */; };
 		30F43CC81F5FF17D00B6A031 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F43CC71F5FF17D00B6A031 /* main.m */; };
 		30F43CCB1F5FF17D00B6A031 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F43CCA1F5FF17D00B6A031 /* AppDelegate.m */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		304829DE1F6267DF0070AA70 /* HStack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HStack-Bridging-Header.h"; sourceTree = "<group>"; };
 		304829E11F62723F0070AA70 /* WVerticalProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WVerticalProgressView.swift; path = TWRProgressView/WVerticalProgressView.swift; sourceTree = "<group>"; };
+		30BA94471F628906001E2C51 /* WVProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WVProgressView.h; path = TWRProgressView/WVProgressView.h; sourceTree = "<group>"; };
+		30BA94481F628906001E2C51 /* WVProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WVProgressView.m; path = TWRProgressView/WVProgressView.m; sourceTree = "<group>"; };
 		30DA9AC61F60F1FB00BF7CC5 /* HorizonalScrollableStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HorizonalScrollableStackView.h; path = ScrollableStackView/HorizonalScrollableStackView.h; sourceTree = "<group>"; };
 		30DA9AC71F60F1FB00BF7CC5 /* HorizonalScrollableStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HorizonalScrollableStackView.m; path = ScrollableStackView/HorizonalScrollableStackView.m; sourceTree = "<group>"; };
 		30F43CC31F5FF17D00B6A031 /* HStack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HStack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +92,8 @@
 			children = (
 				304829DE1F6267DF0070AA70 /* HStack-Bridging-Header.h */,
 				304829E11F62723F0070AA70 /* WVerticalProgressView.swift */,
+				30BA94471F628906001E2C51 /* WVProgressView.h */,
+				30BA94481F628906001E2C51 /* WVProgressView.m */,
 			);
 			name = TWRProgressView;
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 			files = (
 				30DA9AC81F60F1FB00BF7CC5 /* HorizonalScrollableStackView.m in Sources */,
 				30F43CCE1F5FF17D00B6A031 /* ViewController.m in Sources */,
+				30BA94491F628906001E2C51 /* WVProgressView.m in Sources */,
 				30F43CCB1F5FF17D00B6A031 /* AppDelegate.m in Sources */,
 				30F43CC81F5FF17D00B6A031 /* main.m in Sources */,
 				304829E21F62723F0070AA70 /* WVerticalProgressView.swift in Sources */,
