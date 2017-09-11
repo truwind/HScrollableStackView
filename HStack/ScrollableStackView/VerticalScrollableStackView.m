@@ -1,18 +1,14 @@
 //
-//  HorizonalScrollableStackView.m
+//  VerticalScrollableStackView.m
 //  HStack
 //
-//  Created by truwind on 2017. 9. 7..
+//  Created by truwind on 2017. 9. 11..
 //  Copyright © 2017년 truwind. All rights reserved.
 //
 
-#import "HorizonalScrollableStackView.h"
+#import "VerticalScrollableStackView.h"
 
-@interface HorizonalScrollableStackView() 
-
-@end
-
-@implementation HorizonalScrollableStackView
+@implementation VerticalScrollableStackView
 
 - (void) awakeFromNib {
     [super awakeFromNib];
@@ -20,7 +16,7 @@
     [self initialize:self.frame];
 }
 
-- (instancetype)initWithFrame:(CGRect)frame innerWidth:(CGFloat)width {
+- (instancetype)initWithFrame:(CGRect)frame innerHeight:(CGFloat)height{
     self = [super initWithFrame:frame];
     if(self){
         [self initialize:frame];
@@ -30,8 +26,8 @@
 }
 
 - (void)initialize:(CGRect)frame{
-    [super initialize:frame axis:UILayoutConstraintAxisHorizontal];
-    [self setInnerViewSize:CGSizeMake(50, frame.size.height)];
+    [super initialize:frame axis:UILayoutConstraintAxisVertical];
+    [self setInnerViewSize:CGSizeMake(frame.size.width, 50)];
 }
 
 /*
@@ -41,10 +37,17 @@
     // Drawing code
 }
 */
-
 #pragma mark - LifeCycle Function
 - (void)initStackView {
-    [super initStackView];
+    /**
+     * customize by self.... not call [super initStackView]
+     */
+//    [super initStackView];
+    NSInteger numberOfRows = [self.dataSource numberOfRows:self];
+    for(NSInteger i = 0; i < numberOfRows; i++){
+        UIView * subView = [self.dataSource stackView:self cellForRowAtIndex:i];
+        [self addCustomViewToStack:subView];
+    }
 }
 
 #pragma mark - External Function
@@ -54,7 +57,7 @@
     [view.widthAnchor constraintEqualToConstant:self.innerViewWidth].active = YES;
     [view.heightAnchor constraintEqualToConstant:self.innerViewHeight].active = YES;
     
-    self.layoutEqualWidht.constant = self.innerViewWidth * (self.stackView.arrangedSubviews.count + 1);
+    self.layoutEqualHeight.constant = self.innerViewHeight * (self.stackView.arrangedSubviews.count + 1);
     [self.stackView addArrangedSubview:view];
     [self.stackView  setNeedsLayout];
     
@@ -67,7 +70,7 @@
     [view.widthAnchor constraintEqualToConstant:self.innerViewWidth].active = YES;
     [view.heightAnchor constraintEqualToConstant:self.innerViewHeight].active = YES;
     
-    self.layoutEqualWidht.constant = self.innerViewWidth * (self.stackView.arrangedSubviews.count + 1);
+    self.layoutEqualHeight.constant = self.innerViewHeight * (self.stackView.arrangedSubviews.count + 1);
     [self.stackView insertArrangedSubview:view atIndex:index];
     [self.stackView  setNeedsLayout];
     [super addTapGestureToSubView:view tag:(self.stackView.arrangedSubviews.count - 1)];
@@ -90,5 +93,4 @@
     [self.stackView  setNeedsLayout];
     
 }
-
 @end

@@ -10,7 +10,7 @@
 #import "HorizonalScrollableStackView.h"
 #import "HStack-Swift.h"
 
-@interface ViewController () <HorizonalScrollableStackViewDelegate, HorizonalScrollableStackViewDataSource>
+@interface ViewController () <ScrollableStackViewDelegate, ScrollableStackViewDataSource>
 
 
 @property (weak, nonatomic) IBOutlet UIView *backView;
@@ -84,11 +84,11 @@
 }
 
 #pragma mark - HorizonalScrollableStackViewDelegate
-- (NSInteger)numberOfRows:(HorizonalScrollableStackView*)stackView {
+- (NSInteger)numberOfRows:(BasicScrollableStackView*)stackView {
     return 10;
 }
 
-- (WVerticalProgressView *)stackView:(HorizonalScrollableStackView*)stackView cellForRowAtIndex:(NSInteger)index{
+- (UIView *)stackView:(BasicScrollableStackView*)stackView cellForRowAtIndex:(NSInteger)index{
     
     WVerticalProgressView * subView = [[WVerticalProgressView alloc] initWithFrame:CGRectMake(0, 0, self.widthOfInnerView, stackView.frame.size.height)];
 //    UIColor *randomColor = [UIColor colorWithRed:(CGFloat)drand48() green:(CGFloat)drand48() blue:(CGFloat)drand48() alpha:1.0];
@@ -98,12 +98,12 @@
     return subView;
 }
 
-#pragma mark - HorizonalScrollableStackViewDataSource
-- (void)stackView:(HorizonalScrollableStackView*)stackView didSelectRowAtIndex:(NSInteger)index {
+#pragma mark - ScrollableStackViewDataSource
+- (void)stackView:(BasicScrollableStackView*)stackView didSelectRowAtIndex:(NSInteger)index {
     
 }
 
-- (void)stackView:(HorizonalScrollableStackView*)stackView didDeSelectRowAtIndex:(NSInteger)index {
+- (void)stackView:(BasicScrollableStackView*)stackView didDeSelectRowAtIndex:(NSInteger)index {
     
 }
 
