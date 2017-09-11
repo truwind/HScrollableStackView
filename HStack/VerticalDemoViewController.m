@@ -31,8 +31,7 @@
     
     self.scrollViewHeight = self.vwMenuContainer.frame.size.height;
     
-    [self onShowMenuClicked:nil]
-    ;
+    [self onShowMenuClicked:nil];
 }
 
 - (void)didReceiveMemoryWarning {

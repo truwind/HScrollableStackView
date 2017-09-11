@@ -12,6 +12,8 @@
 		304E80971F665B2300249012 /* VerticalDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 304E80961F665B2300249012 /* VerticalDemoViewController.m */; };
 		304E809A1F66648B00249012 /* VerticalScrollableStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 304E80991F66648B00249012 /* VerticalScrollableStackView.m */; };
 		304E809E1F66658C00249012 /* BasicScrollableStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 304E809D1F66658C00249012 /* BasicScrollableStackView.m */; };
+		304E80A11F668CA100249012 /* FMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 304E80A01F668CA100249012 /* FMenuViewController.m */; };
+		304E80A41F668F3C00249012 /* UIView+FMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 304E80A31F668F3C00249012 /* UIView+FMenu.m */; };
 		30BA94491F628906001E2C51 /* WVProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BA94481F628906001E2C51 /* WVProgressView.m */; };
 		30DA9AC81F60F1FB00BF7CC5 /* HorizonalScrollableStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DA9AC71F60F1FB00BF7CC5 /* HorizonalScrollableStackView.m */; };
 		30F43CC81F5FF17D00B6A031 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F43CC71F5FF17D00B6A031 /* main.m */; };
@@ -53,6 +55,10 @@
 		304E809B1F6664D700249012 /* ScrollableStackViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ScrollableStackViewDelegate.h; path = ScrollableStackView/ScrollableStackViewDelegate.h; sourceTree = "<group>"; };
 		304E809C1F66658C00249012 /* BasicScrollableStackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BasicScrollableStackView.h; path = ScrollableStackView/BasicScrollableStackView.h; sourceTree = "<group>"; };
 		304E809D1F66658C00249012 /* BasicScrollableStackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BasicScrollableStackView.m; path = ScrollableStackView/BasicScrollableStackView.m; sourceTree = "<group>"; };
+		304E809F1F668CA100249012 /* FMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMenuViewController.h; sourceTree = "<group>"; };
+		304E80A01F668CA100249012 /* FMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMenuViewController.m; sourceTree = "<group>"; };
+		304E80A21F668F3C00249012 /* UIView+FMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+FMenu.h"; path = "TWRProgressView/UIView+FMenu.h"; sourceTree = "<group>"; };
+		304E80A31F668F3C00249012 /* UIView+FMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIView+FMenu.m"; path = "TWRProgressView/UIView+FMenu.m"; sourceTree = "<group>"; };
 		30BA94471F628906001E2C51 /* WVProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WVProgressView.h; path = TWRProgressView/WVProgressView.h; sourceTree = "<group>"; };
 		30BA94481F628906001E2C51 /* WVProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WVProgressView.m; path = TWRProgressView/WVProgressView.m; sourceTree = "<group>"; };
 		30DA9AC61F60F1FB00BF7CC5 /* HorizonalScrollableStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HorizonalScrollableStackView.h; path = ScrollableStackView/HorizonalScrollableStackView.h; sourceTree = "<group>"; };
@@ -158,11 +164,15 @@
 				30F43CCD1F5FF17D00B6A031 /* ViewController.m */,
 				304E80951F665B2300249012 /* VerticalDemoViewController.h */,
 				304E80961F665B2300249012 /* VerticalDemoViewController.m */,
+				304E809F1F668CA100249012 /* FMenuViewController.h */,
+				304E80A01F668CA100249012 /* FMenuViewController.m */,
 				30F43CCF1F5FF17D00B6A031 /* Main.storyboard */,
 				30F43CD21F5FF17D00B6A031 /* Assets.xcassets */,
 				30F43CD41F5FF17D00B6A031 /* LaunchScreen.storyboard */,
 				30F43CD71F5FF17D00B6A031 /* Info.plist */,
 				30F43CC61F5FF17D00B6A031 /* Supporting Files */,
+				304E80A21F668F3C00249012 /* UIView+FMenu.h */,
+				304E80A31F668F3C00249012 /* UIView+FMenu.m */,
 			);
 			path = HStack;
 			sourceTree = "<group>";
@@ -331,8 +341,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				30DA9AC81F60F1FB00BF7CC5 /* HorizonalScrollableStackView.m in Sources */,
+				304E80A11F668CA100249012 /* FMenuViewController.m in Sources */,
 				30F43CCE1F5FF17D00B6A031 /* ViewController.m in Sources */,
 				30BA94491F628906001E2C51 /* WVProgressView.m in Sources */,
+				304E80A41F668F3C00249012 /* UIView+FMenu.m in Sources */,
 				30F43CCB1F5FF17D00B6A031 /* AppDelegate.m in Sources */,
 				30F43CC81F5FF17D00B6A031 /* main.m in Sources */,
 				304E80971F665B2300249012 /* VerticalDemoViewController.m in Sources */,

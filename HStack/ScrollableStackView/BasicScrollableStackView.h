@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ScrollableStackViewDelegate.h"
+#import "UIView+FMenu.h"
 #import "HStack-Swift.h"
 
 @interface BasicScrollableStackView : UIView <UIGestureRecognizerDelegate>

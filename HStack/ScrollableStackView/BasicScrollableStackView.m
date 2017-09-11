@@ -185,7 +185,18 @@
 
 #pragma mark - UITapGestureRecognizerDelegate
 - (void) tapHandler:(UITapGestureRecognizer*)sender {
-    WVerticalProgressView * subView = (WVerticalProgressView *)sender.view;
+    BOOL isSelected = NO;
+    UIView * subView = nil;
+    if([[sender.view class] isKindOfClass:[WVerticalProgressView class]]){
+        WVerticalProgressView * item = (WVerticalProgressView *)sender.view;
+        isSelected = subView.isSelected;
+        subView = (UIView*)item;
+    } else {
+        subView = (UIView *)sender.view  ;
+        isSelected = subView.isSelected;
+//        subView = (UIView*)item;
+    }
+    
     if(subView){
         if(subView.isSelected) {
             // do unselect action

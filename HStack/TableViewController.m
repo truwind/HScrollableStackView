@@ -9,6 +9,7 @@
 #import "TableViewController.h"
 #import "ViewController.h"
 #import "VerticalDemoViewController.h"
+#import "FMenuViewController.h"
 
 @interface TableViewController ()
 
@@ -27,7 +28,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.dataSource = @[@"Horizontal" ,@"Vertical"];
+    self.dataSource = @[@"Horizontal" ,@"Vertical", @"F-Menu"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,6 +63,10 @@
     } else if (indexPath.row == 1) {
         UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         VerticalDemoViewController * verticalDemoViewController = [storyboard instantiateViewControllerWithIdentifier:@"VerticalDemoViewController"];
+        [self.navigationController pushViewController:verticalDemoViewController animated:YES];
+    } else if (indexPath.row == 2) {
+        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        FMenuViewController * verticalDemoViewController = [storyboard instantiateViewControllerWithIdentifier:@"FMenu"];
         [self.navigationController pushViewController:verticalDemoViewController animated:YES];
     }
 }
