@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "ScrollableStackViewDelegate.h"
-#import "UIView+FMenu.h"
 #import "HStack-Swift.h"
 
 @interface BasicScrollableStackView : UIView <UIGestureRecognizerDelegate>
@@ -26,7 +25,7 @@
 @property (strong, nonatomic) NSLayoutConstraint * layoutEqualHeight;
 
 
-- (instancetype)initWithFrame:(CGRect)frame innerViewsize:(CGFloat)size axis:(UILayoutConstraintAxis)axis;
+- (instancetype)initWithFrame:(CGRect)frame innerViewsize:(CGSize)size axis:(UILayoutConstraintAxis)axis;
 - (void)initialize:(CGRect)frame axis:(UILayoutConstraintAxis)axis;
 
 - (void)initStackView;

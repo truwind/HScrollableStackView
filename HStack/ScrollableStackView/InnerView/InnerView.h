@@ -1,14 +1,14 @@
 //
-//  UIView+FMenu.h
+//  InnerView.h
 //  HStack
 //
-//  Created by truwind on 2017. 9. 11..
+//  Created by truwind on 2017. 9. 12..
 //  Copyright © 2017년 truwind. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (FMenu)
+@interface InnerView : UIView
 
 @property (assign, nonatomic) BOOL isSelected;
 

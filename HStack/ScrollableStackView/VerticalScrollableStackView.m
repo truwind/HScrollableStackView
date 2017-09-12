@@ -12,7 +12,7 @@
 
 - (void) awakeFromNib {
     [super awakeFromNib];
-    
+    NSLog(@"self.frame : %@", NSStringFromCGRect(self.frame));
     [self initialize:self.frame];
 }
 

@@ -8,6 +8,7 @@
 
 #ifndef ScrollableStackViewDelegate_h
 #define ScrollableStackViewDelegate_h
+#import "InnerView.h"
 
 //@class WVerticalProgressView;
 @class BasicScrollableStackView;

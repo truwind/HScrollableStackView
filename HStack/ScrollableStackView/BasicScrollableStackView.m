@@ -23,13 +23,23 @@
     return self;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame innerViewsize:(CGSize)size axis:(UILayoutConstraintAxis)axis {
+    self = [super initWithFrame:frame];
+    if(self){
+        [self initialize:frame axis:axis];
+        [self setInnerViewSize:size];
+    }
+    
+    return self;
+}
+
 - (void)initialize:(CGRect)frame axis:(UILayoutConstraintAxis)axis{
     self.scrollView = [[UIScrollView alloc] initWithFrame:frame];
     self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
     self.scrollView.layoutMargins = UIEdgeInsetsZero;
     [self addSubview:self.scrollView];
     
-    self.backgroundColor = [UIColor yellowColor];
+//    self.backgroundColor = [UIColor yellowColor];
     
     NSLog(@"self.scrollView.bounds :%@", NSStringFromCGRect(self.scrollView.bounds));
     self.stackView = [[UIStackView alloc] initWithFrame:self.scrollView.bounds];
@@ -49,6 +59,10 @@
     [self.scrollView addSubview:self.stackView];
     
     [self initLayoutConstraints];
+    
+    self.backgroundColor = [UIColor clearColor];
+    self.scrollView.backgroundColor = [UIColor clearColor];
+    self.stackView.backgroundColor = [UIColor clearColor];
 }
 
 
@@ -186,13 +200,13 @@
 #pragma mark - UITapGestureRecognizerDelegate
 - (void) tapHandler:(UITapGestureRecognizer*)sender {
     BOOL isSelected = NO;
-    UIView * subView = nil;
+    InnerView * subView = nil;
     if([[sender.view class] isKindOfClass:[WVerticalProgressView class]]){
         WVerticalProgressView * item = (WVerticalProgressView *)sender.view;
         isSelected = subView.isSelected;
-        subView = (UIView*)item;
+        subView = (InnerView*)item;
     } else {
-        subView = (UIView *)sender.view  ;
+        subView = (InnerView *)sender.view  ;
         isSelected = subView.isSelected;
 //        subView = (UIView*)item;
     }

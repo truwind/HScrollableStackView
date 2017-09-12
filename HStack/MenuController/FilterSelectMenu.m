@@ -1,42 +1,43 @@
 //
-//  FMenuViewController.m
+//  FilterSelectMenu.m
 //  HStack
 //
-//  Created by truwind on 2017. 9. 11..
+//  Created by truwind on 2017. 9. 12..
 //  Copyright © 2017년 truwind. All rights reserved.
 //
 
-#import "FMenuViewController.h"
+#import "FilterSelectMenu.h"
 #import "HorizonalScrollableStackView.h"
 #import "VerticalScrollableStackView.h"
 
-@interface FMenuViewController ()<ScrollableStackViewDelegate, ScrollableStackViewDataSource>
 
-@property (weak, nonatomic) IBOutlet UIView *vwMainContainer;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *cMainContainerHeight;
+@interface FilterSelectMenu () <ScrollableStackViewDelegate, ScrollableStackViewDataSource>
 @property (weak, nonatomic) IBOutlet HorizonalScrollableStackView *vwCategoryContainer;
 @property (weak, nonatomic) IBOutlet VerticalScrollableStackView *vwItemContainer;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *cItemContainerHeight;
-
-
-@property (assign, nonatomic) CGFloat orginalMainMenuHeight;
 
 @property (assign, nonatomic) CGFloat orginalItemHeight;
 
 @property (assign, nonatomic) CGFloat innerViewWidth;
 @property (assign, nonatomic) CGFloat innerViewHeight;
 
-@property (assign, nonatomic) BOOL isLeftMenuShow;
-@property (assign, nonatomic) BOOL isRightMenuShow;
-
 @end
 
-@implementation FMenuViewController
+@implementation FilterSelectMenu
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
+- (void)awakeFromNib {
+    [super awakeFromNib];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if(self){
+    }
+    return self;
+}
+
+- (void)initialzie {
     self.innerViewWidth = 50;
     self.vwCategoryContainer.dataSource = self;
     self.vwCategoryContainer.delegate = self;
@@ -49,50 +50,17 @@
     [self.vwItemContainer setInnerViewSize:CGSizeMake(self.vwItemContainer.frame.size.width, self.innerViewHeight)];
     [self.vwItemContainer initStackView];
     
-    self.orginalMainMenuHeight = self.vwMainContainer.frame.size.height;
+    NSLog(@"self.vwCategoryContainer.frame : %@", NSStringFromCGRect(self.vwCategoryContainer.frame));
     self.orginalItemHeight  = self.vwItemContainer.frame.size.height;
-    
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
 }
 */
-- (IBAction)onMenuClicked:(id)sender {
-    [self.view layoutIfNeeded];
-    self.isLeftMenuShow =! self.isLeftMenuShow;
 
-    if(self.isLeftMenuShow) {
-        [UIView animateWithDuration:0.25 animations:^{
-            [self.vwMainContainer setHidden:!self.isLeftMenuShow];
-            self.cMainContainerHeight.constant = 0;
-            [self.view layoutIfNeeded];
-        } completion:^(BOOL finished) {
-        }];
-    } else {
-        [UIView animateWithDuration:0.25 animations:^{
-            self.cMainContainerHeight.constant = self.orginalMainMenuHeight;
-            [self.view layoutIfNeeded];
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:0.5 animations:^{
-                [self.vwMainContainer setHidden:!self.isLeftMenuShow];
-            }];
-        }];
-    }
-}
-
-- (IBAction)onAffectClicked:(id)sender {
-}
 
 #pragma mark - HorizonalScrollableStackViewDelegate
 - (NSInteger)numberOfRows:(BasicScrollableStackView*)stackView {
@@ -124,21 +92,21 @@
 - (void)stackView:(BasicScrollableStackView*)stackView didSelectRowAtIndex:(NSInteger)index {
     if(stackView == self.vwCategoryContainer){
         NSLog(@"필터 카테고리 선택 : %d", index);
-//        [self.view layoutIfNeeded];
+        //        [self.view layoutIfNeeded];
         
         // hide animation
         [UIView animateWithDuration:0.25 animations:^{
             self.vwItemContainer.transform = CGAffineTransformMakeScale(1, 0);
-//            self.cItemContainerHeight.constant = self.orginalItemHeight;
-//            [self.view layoutIfNeeded];
+            //            self.cItemContainerHeight.constant = self.orginalItemHeight;
+            //            [self.view layoutIfNeeded];
         } completion:^(BOOL finished) {
-//            [self.vwItemContainer setHidden:YES];
+            //            [self.vwItemContainer setHidden:YES];
             
             [UIView animateWithDuration:0.25 animations:^{
-//                [self.vwItemContainer setHidden:NO];
+                //                [self.vwItemContainer setHidden:NO];
                 self.vwItemContainer.transform = CGAffineTransformIdentity;
-//                self.cItemContainerHeight.constant = 0;
-//                [self.view layoutIfNeeded];
+                //                self.cItemContainerHeight.constant = 0;
+                //                [self.view layoutIfNeeded];
             } completion:^(BOOL finished) {
             }];
         }];
@@ -154,5 +122,6 @@
         NSLog(@"Item 카테고리 선택 해제: %d", index);
     }
 }
+
 
 @end

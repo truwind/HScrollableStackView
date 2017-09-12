@@ -56,11 +56,11 @@ class WVerticalProgressView: UIView {
         progress = progress > 1.0 ? progress / 100 : progress
         
         //        self.layer.cornerRadius = self.frame.height / 2.0//CGRectGetHeight(self.frame) / 2.0
-        self.layer.borderColor = UIColor.gray.cgColor//grayColor().CGColor
-        self.layer.borderWidth = 1.0
+        self.layer.borderColor = UIColor.white.cgColor//grayColor().CGColor
+        self.layer.borderWidth = 0.5
         
         let margin: CGFloat = 0.0
-        var width = (self.frame.width - margin) // * progress
+        let width = (self.frame.width - margin) // * progress
         let height = (self.frame.height - margin ) * progress
         
         let pathRef = UIBezierPath(rect: CGRect(x: margin / 2.0, y: (self.frame.height - margin ), width: width, height: -height))

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12121"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FilterSelectMenu">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Z0-ke-4Eb" customClass="HorizonalScrollableStackView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="IOi-lc-Cif"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4V-dV-jY3" customClass="VerticalScrollableStackView">
+                    <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="v4V-dV-jY3" secondAttribute="trailing" id="6ZQ-sb-zq2"/>
+                <constraint firstAttribute="trailing" secondItem="3Z0-ke-4Eb" secondAttribute="trailing" id="F82-MV-fkA"/>
+                <constraint firstItem="v4V-dV-jY3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Hl0-Bc-i9L"/>
+                <constraint firstAttribute="bottom" secondItem="v4V-dV-jY3" secondAttribute="bottom" id="NY4-8p-cA5"/>
+                <constraint firstItem="v4V-dV-jY3" firstAttribute="top" secondItem="3Z0-ke-4Eb" secondAttribute="bottom" id="a9e-SR-gtq"/>
+                <constraint firstItem="3Z0-ke-4Eb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bag-yk-F1b"/>
+                <constraint firstItem="3Z0-ke-4Eb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sid-Y2-VTX"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cItemContainerHeight" destination="NY4-8p-cA5" id="zy7-q3-K9g"/>
+                <outlet property="vwCategoryContainer" destination="3Z0-ke-4Eb" id="J2g-5o-TC8"/>
+                <outlet property="vwItemContainer" destination="v4V-dV-jY3" id="5qd-Xs-jCW"/>
+            </connections>
+            <point key="canvasLocation" x="-396" y="6"/>
+        </view>
+    </objects>
+</document>

@@ -13,7 +13,12 @@
 		304E809A1F66648B00249012 /* VerticalScrollableStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 304E80991F66648B00249012 /* VerticalScrollableStackView.m */; };
 		304E809E1F66658C00249012 /* BasicScrollableStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 304E809D1F66658C00249012 /* BasicScrollableStackView.m */; };
 		304E80A11F668CA100249012 /* FMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 304E80A01F668CA100249012 /* FMenuViewController.m */; };
-		304E80A41F668F3C00249012 /* UIView+FMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 304E80A31F668F3C00249012 /* UIView+FMenu.m */; };
+		308788231F67A57B0052E3FB /* InnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 308788221F67A57B0052E3FB /* InnerView.m */; };
+		308788271F67B2FE0052E3FB /* FilterSelectMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 308788261F67B2FE0052E3FB /* FilterSelectMenu.m */; };
+		308788291F67B3120052E3FB /* FilterSelectMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308788281F67B3120052E3FB /* FilterSelectMenu.xib */; };
+		3087882C1F67B57D0052E3FB /* FMenu2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3087882B1F67B57D0052E3FB /* FMenu2ViewController.m */; };
+		3087882F1F67BE4E0052E3FB /* AffectSelectMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3087882E1F67BE4E0052E3FB /* AffectSelectMenu.m */; };
+		308788311F67BE600052E3FB /* AffectSelectMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308788301F67BE600052E3FB /* AffectSelectMenu.xib */; };
 		30BA94491F628906001E2C51 /* WVProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BA94481F628906001E2C51 /* WVProgressView.m */; };
 		30DA9AC81F60F1FB00BF7CC5 /* HorizonalScrollableStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DA9AC71F60F1FB00BF7CC5 /* HorizonalScrollableStackView.m */; };
 		30F43CC81F5FF17D00B6A031 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F43CC71F5FF17D00B6A031 /* main.m */; };
@@ -57,8 +62,16 @@
 		304E809D1F66658C00249012 /* BasicScrollableStackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BasicScrollableStackView.m; path = ScrollableStackView/BasicScrollableStackView.m; sourceTree = "<group>"; };
 		304E809F1F668CA100249012 /* FMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMenuViewController.h; sourceTree = "<group>"; };
 		304E80A01F668CA100249012 /* FMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMenuViewController.m; sourceTree = "<group>"; };
-		304E80A21F668F3C00249012 /* UIView+FMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+FMenu.h"; path = "TWRProgressView/UIView+FMenu.h"; sourceTree = "<group>"; };
-		304E80A31F668F3C00249012 /* UIView+FMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIView+FMenu.m"; path = "TWRProgressView/UIView+FMenu.m"; sourceTree = "<group>"; };
+		308788211F67A57B0052E3FB /* InnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InnerView.h; path = ScrollableStackView/InnerView/InnerView.h; sourceTree = "<group>"; };
+		308788221F67A57B0052E3FB /* InnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InnerView.m; path = ScrollableStackView/InnerView/InnerView.m; sourceTree = "<group>"; };
+		308788251F67B2FE0052E3FB /* FilterSelectMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilterSelectMenu.h; path = MenuController/FilterSelectMenu.h; sourceTree = "<group>"; };
+		308788261F67B2FE0052E3FB /* FilterSelectMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilterSelectMenu.m; path = MenuController/FilterSelectMenu.m; sourceTree = "<group>"; };
+		308788281F67B3120052E3FB /* FilterSelectMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilterSelectMenu.xib; path = MenuController/FilterSelectMenu.xib; sourceTree = "<group>"; };
+		3087882A1F67B57D0052E3FB /* FMenu2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMenu2ViewController.h; sourceTree = "<group>"; };
+		3087882B1F67B57D0052E3FB /* FMenu2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMenu2ViewController.m; sourceTree = "<group>"; };
+		3087882D1F67BE4E0052E3FB /* AffectSelectMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AffectSelectMenu.h; path = MenuController/AffectSelectMenu.h; sourceTree = "<group>"; };
+		3087882E1F67BE4E0052E3FB /* AffectSelectMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AffectSelectMenu.m; path = MenuController/AffectSelectMenu.m; sourceTree = "<group>"; };
+		308788301F67BE600052E3FB /* AffectSelectMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AffectSelectMenu.xib; path = MenuController/AffectSelectMenu.xib; sourceTree = "<group>"; };
 		30BA94471F628906001E2C51 /* WVProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WVProgressView.h; path = TWRProgressView/WVProgressView.h; sourceTree = "<group>"; };
 		30BA94481F628906001E2C51 /* WVProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WVProgressView.m; path = TWRProgressView/WVProgressView.m; sourceTree = "<group>"; };
 		30DA9AC61F60F1FB00BF7CC5 /* HorizonalScrollableStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HorizonalScrollableStackView.h; path = ScrollableStackView/HorizonalScrollableStackView.h; sourceTree = "<group>"; };
@@ -117,9 +130,32 @@
 			name = TWRProgressView;
 			sourceTree = "<group>";
 		};
+		308788201F67A5550052E3FB /* InnerView */ = {
+			isa = PBXGroup;
+			children = (
+				308788211F67A57B0052E3FB /* InnerView.h */,
+				308788221F67A57B0052E3FB /* InnerView.m */,
+			);
+			name = InnerView;
+			sourceTree = "<group>";
+		};
+		308788241F67B2430052E3FB /* MenuController */ = {
+			isa = PBXGroup;
+			children = (
+				308788251F67B2FE0052E3FB /* FilterSelectMenu.h */,
+				308788261F67B2FE0052E3FB /* FilterSelectMenu.m */,
+				308788281F67B3120052E3FB /* FilterSelectMenu.xib */,
+				3087882D1F67BE4E0052E3FB /* AffectSelectMenu.h */,
+				3087882E1F67BE4E0052E3FB /* AffectSelectMenu.m */,
+				308788301F67BE600052E3FB /* AffectSelectMenu.xib */,
+			);
+			name = MenuController;
+			sourceTree = "<group>";
+		};
 		30DA9AC51F60F1C600BF7CC5 /* ScrollableStackView */ = {
 			isa = PBXGroup;
 			children = (
+				308788201F67A5550052E3FB /* InnerView */,
 				304E809B1F6664D700249012 /* ScrollableStackViewDelegate.h */,
 				304E809C1F66658C00249012 /* BasicScrollableStackView.h */,
 				304E809D1F66658C00249012 /* BasicScrollableStackView.m */,
@@ -156,6 +192,7 @@
 			children = (
 				304829D71F62381D0070AA70 /* TWRProgressView */,
 				30DA9AC51F60F1C600BF7CC5 /* ScrollableStackView */,
+				308788241F67B2430052E3FB /* MenuController */,
 				30F43CC91F5FF17D00B6A031 /* AppDelegate.h */,
 				30F43CCA1F5FF17D00B6A031 /* AppDelegate.m */,
 				304E80921F665A1A00249012 /* TableViewController.h */,
@@ -166,13 +203,13 @@
 				304E80961F665B2300249012 /* VerticalDemoViewController.m */,
 				304E809F1F668CA100249012 /* FMenuViewController.h */,
 				304E80A01F668CA100249012 /* FMenuViewController.m */,
+				3087882A1F67B57D0052E3FB /* FMenu2ViewController.h */,
+				3087882B1F67B57D0052E3FB /* FMenu2ViewController.m */,
 				30F43CCF1F5FF17D00B6A031 /* Main.storyboard */,
 				30F43CD21F5FF17D00B6A031 /* Assets.xcassets */,
 				30F43CD41F5FF17D00B6A031 /* LaunchScreen.storyboard */,
 				30F43CD71F5FF17D00B6A031 /* Info.plist */,
 				30F43CC61F5FF17D00B6A031 /* Supporting Files */,
-				304E80A21F668F3C00249012 /* UIView+FMenu.h */,
-				304E80A31F668F3C00249012 /* UIView+FMenu.m */,
 			);
 			path = HStack;
 			sourceTree = "<group>";
@@ -313,8 +350,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308788291F67B3120052E3FB /* FilterSelectMenu.xib in Resources */,
 				30F43CD61F5FF17D00B6A031 /* LaunchScreen.storyboard in Resources */,
 				30F43CD31F5FF17D00B6A031 /* Assets.xcassets in Resources */,
+				308788311F67BE600052E3FB /* AffectSelectMenu.xib in Resources */,
 				30F43CD11F5FF17D00B6A031 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,12 +383,15 @@
 				304E80A11F668CA100249012 /* FMenuViewController.m in Sources */,
 				30F43CCE1F5FF17D00B6A031 /* ViewController.m in Sources */,
 				30BA94491F628906001E2C51 /* WVProgressView.m in Sources */,
-				304E80A41F668F3C00249012 /* UIView+FMenu.m in Sources */,
 				30F43CCB1F5FF17D00B6A031 /* AppDelegate.m in Sources */,
+				308788231F67A57B0052E3FB /* InnerView.m in Sources */,
 				30F43CC81F5FF17D00B6A031 /* main.m in Sources */,
 				304E80971F665B2300249012 /* VerticalDemoViewController.m in Sources */,
 				304E80941F665A1A00249012 /* TableViewController.m in Sources */,
+				3087882C1F67B57D0052E3FB /* FMenu2ViewController.m in Sources */,
+				3087882F1F67BE4E0052E3FB /* AffectSelectMenu.m in Sources */,
 				304E809E1F66658C00249012 /* BasicScrollableStackView.m in Sources */,
+				308788271F67B2FE0052E3FB /* FilterSelectMenu.m in Sources */,
 				304E809A1F66648B00249012 /* VerticalScrollableStackView.m in Sources */,
 				304829E21F62723F0070AA70 /* WVerticalProgressView.swift in Sources */,
 			);

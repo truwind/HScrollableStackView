@@ -73,8 +73,8 @@
 
 - (UIView *)stackView:(BasicScrollableStackView*)stackView cellForRowAtIndex:(NSInteger)index{
     
-    UIView * subView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, stackView.frame.size.width, 50)];
-    subView.backgroundColor = [UIColor lightGrayColor];
+    InnerView * subView = [[InnerView alloc] initWithFrame:CGRectMake(0, 0, stackView.frame.size.width, 50)];
+    subView.backgroundColor = [UIColor blueColor];
     subView.layer.borderColor = [UIColor redColor].CGColor;
     subView.layer.borderWidth = 0.5;
     return subView;

@@ -28,7 +28,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.dataSource = @[@"Horizontal" ,@"Vertical", @"F-Menu"];
+    self.dataSource = @[@"Horizontal" ,@"Vertical", @"F-Menu", @"F-Menu2"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,6 +67,10 @@
     } else if (indexPath.row == 2) {
         UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         FMenuViewController * verticalDemoViewController = [storyboard instantiateViewControllerWithIdentifier:@"FMenu"];
+        [self.navigationController pushViewController:verticalDemoViewController animated:YES];
+    } else if (indexPath.row == 3) {
+        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        FMenuViewController * verticalDemoViewController = [storyboard instantiateViewControllerWithIdentifier:@"FMenu2"];
         [self.navigationController pushViewController:verticalDemoViewController animated:YES];
     }
 }

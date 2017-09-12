@@ -76,19 +76,19 @@
 /**
  * function for Test
  */
-- (void)addUIViewToStack {
-    UIView * newView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.innerViewWidth, self.innerViewHeight)];
-    UIColor *randomColor = [UIColor colorWithRed:(CGFloat)drand48() green:(CGFloat)drand48() blue:(CGFloat)drand48() alpha:1.0];
-    //
-    //newView.widthAnchor constraintEqualToConstant[].active = YES;로 설정해줘야 동적으로 subView를 추가할 수 있다..
-    [newView.widthAnchor constraintEqualToConstant:self.innerViewWidth].active = YES;
-    [newView.heightAnchor constraintEqualToConstant:self.innerViewHeight].active = YES;
-    newView.backgroundColor = randomColor;
-    
-    self.layoutEqualWidht.constant = self.innerViewWidth * (self.stackView.arrangedSubviews.count + 1);
-    [self.stackView addArrangedSubview:newView];
-    [self.stackView  setNeedsLayout];
-    
-}
+//- (void)addUIViewToStack {
+//    UIView * newView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.innerViewWidth, self.innerViewHeight)];
+//    UIColor *randomColor = [UIColor colorWithRed:(CGFloat)drand48() green:(CGFloat)drand48() blue:(CGFloat)drand48() alpha:1.0];
+//    //
+//    //newView.widthAnchor constraintEqualToConstant[].active = YES;로 설정해줘야 동적으로 subView를 추가할 수 있다..
+//    [newView.widthAnchor constraintEqualToConstant:self.innerViewWidth].active = YES;
+//    [newView.heightAnchor constraintEqualToConstant:self.innerViewHeight].active = YES;
+//    newView.backgroundColor = randomColor;
+//    
+//    self.layoutEqualWidht.constant = self.innerViewWidth * (self.stackView.arrangedSubviews.count + 1);
+//    [self.stackView addArrangedSubview:newView];
+//    [self.stackView  setNeedsLayout];
+//    
+//}
 
 @end
